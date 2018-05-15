@@ -5,7 +5,7 @@ import { Component, Event, EventEmitter, Prop, State } from '@stencil/core';
   styleUrl: 'button-click-issue-comp.scss',
   shadow: false
 })
-export class MyComponent {
+export class ButtonClickIssueComp {
 
   // External Events
   @Event() buttonClicked: EventEmitter;
