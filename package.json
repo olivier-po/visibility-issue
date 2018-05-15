@@ -1,10 +1,11 @@
 {
-  "name": "my-component",
-  "version": "0.0.1",
+  "name": "visibility-issue",
+  "version": "0.0.11",
   "description": "Stencil Component Starter",
-  "main": "dist/mycomponent.js",
+  "main": "dist/index.js",
   "types": "dist/types/components.d.ts",
   "collection": "dist/collection/collection-manifest.json",
+  "module": "dist/esm/index.js",
   "files": [
     "dist/"
   ],
@@ -17,9 +18,13 @@
     "test": "jest --no-cache",
     "test.watch": "jest --watch --no-cache"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@stencil/core": "0.9.0-0",
+    "@stencil/sass": "0.0.5"
+  },
   "devDependencies": {
-    "@stencil/core": "^0.7.22",
+    "ionicons": "^4.0.0-19",
+    "@ionic/core": "4.0.0-alpha.6",
     "@stencil/dev-server": "latest",
     "@stencil/utils": "latest",
     "@types/jest": "^21.1.1",

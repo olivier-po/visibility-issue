@@ -23,39 +23,42 @@ declare global {
   interface HTMLAttributes {}
 }
 
+import 'ionicons';
+import '@ionic/core';
+
 
 declare global {
 
   namespace StencilComponents {
-    interface MyComponent {
-      'first': string;
-      'last': string;
+    interface ButtonClickIssueComp {
+
     }
   }
 
-  interface HTMLMyComponentElement extends StencilComponents.MyComponent, HTMLStencilElement {}
+  interface HTMLButtonClickIssueCompElement extends StencilComponents.ButtonClickIssueComp, HTMLStencilElement {}
 
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  var HTMLButtonClickIssueCompElement: {
+    prototype: HTMLButtonClickIssueCompElement;
+    new (): HTMLButtonClickIssueCompElement;
   };
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'button-click-issue-comp': HTMLButtonClickIssueCompElement;
   }
   interface ElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'button-click-issue-comp': HTMLButtonClickIssueCompElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'my-component': JSXElements.MyComponentAttributes;
+      'button-click-issue-comp': JSXElements.ButtonClickIssueCompAttributes;
     }
   }
   namespace JSXElements {
-    export interface MyComponentAttributes extends HTMLAttributes {
-      'first'?: string;
-      'last'?: string;
+    export interface ButtonClickIssueCompAttributes extends HTMLAttributes {
+      'onButtonClicked'?: (event: CustomEvent) => void;
     }
   }
 }
 
 declare global { namespace JSX { interface StencilJSX {} } }
+
+export declare function defineCustomElements(window: any): void;

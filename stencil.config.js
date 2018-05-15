@@ -1,14 +1,19 @@
+const sass = require('@stencil/sass');
+
 exports.config = {
-  namespace: 'mycomponent',
-  outputTargets:[
-    { 
-      type: 'dist' 
+  namespace: 'visibility-issue',
+  outputTargets: [{
+      type: 'dist'
     },
-    { 
+    {
       type: 'www',
       serviceWorker: false
     }
-  ]
+  ],
+  plugins: [
+    sass()
+  ],
+  globalStyle: ['src/global.scss'],
 };
 
 exports.devServer = {
